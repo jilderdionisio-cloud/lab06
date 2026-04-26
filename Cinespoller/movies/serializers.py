@@ -48,13 +48,6 @@ class MovieSerializer(serializers.ModelSerializer):
     # NUEVO: Reseñas asociadas a la película
     reviews = ReviewSerializer(many=True, read_only=True)
 
-
-# NUEVO: Serializer para PerfilUsuario
-class PerfilUsuarioSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = PerfilUsuario
-        fields = '__all__'
-
     class Meta:
         model = Movie
         fields = (
@@ -71,3 +64,11 @@ class PerfilUsuarioSerializer(serializers.ModelSerializer):
             "updated_at",
         )
         read_only_fields = ("id", "created_at", "updated_at")
+
+# NUEVO: Serializer para PerfilUsuario
+class PerfilUsuarioSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = PerfilUsuario
+        fields = '__all__'
+
+    
