@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import Genre, Movie
+from .models import Genre, Movie, Review
 
 
 # NUEVO: Serializer para Genre
@@ -11,7 +11,30 @@ class GenreSerializer(serializers.ModelSerializer):
         read_only_fields = ("id", "created_at", "updated_at")
 
 
-# CAMBIO: MovieSerializer actualizado para incluir géneros
+# NUEVO: Serializer para Review
+class ReviewSerializer(serializers.ModelSerializer):
+    movie = serializers.PrimaryKeyRelatedField(read_only=True)
+    movie_id = serializers.PrimaryKeyRelatedField(
+        queryset=Movie.objects.all(),
+        source="movie",
+        write_only=True,
+    )
+
+    class Meta:
+        model = Review
+        fields = (
+            "id",
+            "movie",
+            "movie_id",
+            "rating",
+            "comment",
+            "created_at",
+            "updated_at",
+        )
+        read_only_fields = ("id", "created_at", "updated_at")
+
+
+# CAMBIO: MovieSerializer actualizado para incluir géneros y reseñas
 class MovieSerializer(serializers.ModelSerializer):
     # NUEVO: Incluir géneros como objetos anidados (lectura)
     genres = GenreSerializer(many=True, read_only=True)
@@ -22,6 +45,8 @@ class MovieSerializer(serializers.ModelSerializer):
         write_only=True,
         source="genres"
     )
+    # NUEVO: Reseñas asociadas a la película
+    reviews = ReviewSerializer(many=True, read_only=True)
 
     class Meta:
         model = Movie
@@ -34,6 +59,7 @@ class MovieSerializer(serializers.ModelSerializer):
             "is_active",
             "genres",
             "genre_ids",
+            "reviews",
             "created_at",
             "updated_at",
         )

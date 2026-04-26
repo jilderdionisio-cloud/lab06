@@ -1,3 +1,4 @@
+from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 
 
@@ -35,3 +36,22 @@ class Movie(models.Model):
 
     def __str__(self) -> str:
         return self.title
+
+
+class Review(models.Model):
+    # NUEVO: Reseñas asociadas a una película
+    movie = models.ForeignKey(Movie, related_name="reviews", on_delete=models.CASCADE)
+    rating = models.PositiveSmallIntegerField(
+        validators=[MinValueValidator(1), MaxValueValidator(5)]
+    )
+    comment = models.TextField(blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ["-created_at"]
+        verbose_name = "review"
+        verbose_name_plural = "reviews"
+
+    def __str__(self) -> str:
+        return f"{self.movie.title} - {self.rating}/5"
