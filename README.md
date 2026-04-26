@@ -22,10 +22,46 @@ CineSpoilers es una API REST desarrollada con Django y Django REST Framework par
 ![Géneros en put](doc%20de%20capturas/putgenerosj.png)
 ![Géneros en delete](doc%20de%20capturas/deletegeneros.png)
 
-## Adrina Chincha
+## 1. Adriana Chincha
+### 2. Búsqueda por Filtros, Paginación y CRUD (Naomi Veliz)
 
-## Naomi veliz
+**Descripción:**
+- Permite buscar películas por título o sinopsis
+- Permite filtrar películas por género específico
+- Sistema de paginación integrado (10 resultados por página)
+- Endpoint personalizado para películas por género
 
+#### Pruebas
+
+- **POST Crear Género**  
+![Crear género](doc%20de%20capturas/naomi-crear-genero.png)
+
+- **POST Crear Película**  
+![Crear película](doc%20de%20capturas/naomi-crear-pelicula.png)
+
+- **GET Listar Películas**  
+![Listar películas](doc%20de%20capturas/naomi-listar-peliculas.png)
+
+- **GET Búsqueda por Título**  
+![Búsqueda](doc%20de%20capturas/naomi-busqueda.png)
+
+- **GET Filtrar por Género**  
+![Filtro por género](doc%20de%20capturas/naomi-filtro-genero.png)
+
+- **GET Endpoint Personalizado por Género**  
+![Endpoint por género](doc%20de%20capturas/naomi-endpoint-genero.png)
+
+- **GET Paginación**  
+![Paginación](doc%20de%20capturas/naomi-paginacion.png)
+
+- **GET Paginación 2**  
+![Paginación 2](doc%20de%20capturas/naomi-paginacion2.png)
+
+- **DELETE Eliminar Película**  
+![Eliminar película](doc%20de%20capturas/naomi-delete-pelicula.png)
+
+- **PUT Actualizar Género**  
+![Actualizar género](doc%20de%20capturas/naomi-put-genero.png)
 # Funcionalidad Agregada 
 
 ### 1. Entidad Reseña (JILDER ALEX DIONISO ROJAS)
