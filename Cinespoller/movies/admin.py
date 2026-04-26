@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Genre, Movie, Review
+from .models import Genre, Movie, Review, PerfilUsuario
 
 
 class ReviewInline(admin.TabularInline):
@@ -32,3 +32,10 @@ class MovieAdmin(admin.ModelAdmin):
     # NUEVO: configurar inline para genres y reviews
     filter_horizontal = ("genres",)
     inlines = (ReviewInline,)
+
+
+# NUEVO: Registro de PerfilUsuario en admin
+@admin.register(PerfilUsuario)
+class PerfilUsuarioAdmin(admin.ModelAdmin):
+    list_display = ("id", "nombre", "email", "edad", "ciudad")
+    search_fields = ("nombre", "email")
