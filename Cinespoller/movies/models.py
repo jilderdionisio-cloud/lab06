@@ -55,3 +55,19 @@ class Review(models.Model):
 
     def __str__(self) -> str:
         return f"{self.movie.title} - {self.rating}/5"
+
+
+# NUEVO: Modelo PerfilUsuario migrado desde la app usuarios
+class PerfilUsuario(models.Model):
+    nombre = models.CharField(max_length=100)
+    email = models.EmailField(unique=True)
+    edad = models.IntegerField()
+    ciudad = models.CharField(max_length=100)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ["nombre"]
+
+    def __str__(self):
+        return self.nombre

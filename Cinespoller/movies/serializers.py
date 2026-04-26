@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import Genre, Movie, Review
+from .models import Genre, Movie, Review, PerfilUsuario
 
 
 # NUEVO: Serializer para Genre
@@ -47,6 +47,13 @@ class MovieSerializer(serializers.ModelSerializer):
     )
     # NUEVO: Reseñas asociadas a la película
     reviews = ReviewSerializer(many=True, read_only=True)
+
+
+# NUEVO: Serializer para PerfilUsuario
+class PerfilUsuarioSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = PerfilUsuario
+        fields = '__all__'
 
     class Meta:
         model = Movie

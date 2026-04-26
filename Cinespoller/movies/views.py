@@ -5,8 +5,8 @@ from rest_framework.filters import SearchFilter, OrderingFilter
 from django_filters.rest_framework import DjangoFilterBackend
 from django.db.models import Avg
 
-from .models import Genre, Movie, Review
-from .serializers import GenreSerializer, MovieSerializer, ReviewSerializer
+from .models import Genre, Movie, Review, PerfilUsuario
+from .serializers import GenreSerializer, MovieSerializer, ReviewSerializer, PerfilUsuarioSerializer
 
 
 class GenreViewSet(viewsets.ModelViewSet):
@@ -53,3 +53,9 @@ class MovieViewSet(viewsets.ModelViewSet):
             'total': movies.count(),
             'results': serializer.data
         })
+
+
+# NUEVO: ViewSet para PerfilUsuario (CRUD completo)
+class PerfilUsuarioViewSet(viewsets.ModelViewSet):
+    queryset = PerfilUsuario.objects.all()
+    serializer_class = PerfilUsuarioSerializer

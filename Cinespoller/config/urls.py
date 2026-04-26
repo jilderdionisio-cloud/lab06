@@ -20,4 +20,5 @@ from django.urls import include, path
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("api/", include("movies.urls")),
+    # CAMBIO: Eliminada la ruta include('usuarios.urls') ya que la funcionalidad se migró a movies
 ]
