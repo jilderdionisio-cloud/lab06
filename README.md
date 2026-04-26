@@ -19,12 +19,26 @@ CineSpoilers es una API REST desarrollada con Django y Django REST Framework par
 - Jilder Alex 
 ![Géneros en Admin](doc%20de%20capturas/CP1.PNG)
 
----
+- 
 ## Funcionalidad Agregada 
 
 ### 1. Entidad Reseña
 
-Camputas d epantalla 
+- Vista de reseñas desde el navegador  
+![Captura de pantalla](./doc%20de%20capturas/cap01.png)
+
+#### Pruebas 
+- POST  
+![Captura POST](./doc%20de%20capturas/postj.png)
+
+- GET  
+![Captura GET](./doc%20de%20capturas/getj.png)
+
+- PUT  
+![Captura PUT](./doc%20de%20capturas/putj.png)
+
+- DELETE  
+![Captura DELETE](./doc%20de%20capturas/deletej.png)
 
 
 ### 2. Búsqueda por Filtros
