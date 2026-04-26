@@ -8,35 +8,57 @@ CineSpoilers es una API REST desarrollada con Django y Django REST Framework par
 
 ## 🎯 Funcionalidades Principales (Laboratorio del 26 de Abril de 2026)
 
-### ✅ 1. Entidad Género
+### ✅ 1. Entidad Género ( SE PRESENTAN LAS CAPTURAS DE LOS 3 MIENBROS )
 
 **Descripción:**
 - Permite categorizar películas por géneros (Drama, Acción, Ciencia Ficción, etc.)
 - Relación muchos a muchos (M2M) con Movie
 - Cada película puede tener múltiples géneros
 
-**Captura de Pantalla:**
-- Jilder Alex 
-![Géneros en Admin](doc%20de%20capturas/CP1.PNG)
+**Captura de Pantalla pruebas:**
+## Jilder Alex Dionisio Rojas 
+![Géneros en get](doc%20de%20capturas/getgenerosj.png) 
+![Géneros en post](doc%20de%20capturas/postgenerosj.png)
+![Géneros en put](doc%20de%20capturas/putgenerosj.png)
+![Géneros en delete](doc%20de%20capturas/deletegeneros.png)
 
----
-## Funcionalidad Agregada 
+## Adrina Chincha
 
-### 1. Entidad Reseña
+## Naomi veliz
 
-Camputas d epantalla 
+# Funcionalidad Agregada 
 
+### 1. Entidad Reseña (JILDER ALEX DIONISO ROJAS)
 
-### 2. Búsqueda por Filtros
+- Vista de reseñas desde el navegador  
+![Captura de pantalla](./doc%20de%20capturas/cap01.png)
+
+#### Pruebas 
+- POST  
+![Captura POST](./doc%20de%20capturas/postj.png)
+
+- GET  
+![Captura GET](./doc%20de%20capturas/getj.png)
+
+- PUT  
+![Captura PUT](./doc%20de%20capturas/putj.png)
+
+- DELETE  
+![Captura DELETE](./doc%20de%20capturas/deletej.png)
+
+- CAMBIO BASE DE DATOS 
+![Captura BASE DE DATOS](./doc%20de%20capturas/dbreseña.png)
+
+### 2. Búsqueda por Filtros (NAOMI VELIZ PIE)
 
 Capturas de pantalla 
 
-### 3. Perfil usuario 
+### 3. Perfil usuario (ADRIANA)
 
 Captutas de pantalla 
 
 
-## 🔍 Características Destacadas
+## 🔍 Características Destacadas 
 
 ✅ **Interfaz completamente en español**
 ✅ **Calificación con estrellas**
