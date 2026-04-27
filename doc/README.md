@@ -73,6 +73,6 @@ La API está disponible bajo el prefijo `/api/`. Los endpoints para películas s
 - **Naomi Veliz**
 
 
-- **Adrina Chinchayguara**
+- **Adriana Chinchayhuara**
 
 Cada miembro contribuyó en las diferentes fases del desarrollo, incluyendo el diseño del modelo, implementación de la API y documentación.
